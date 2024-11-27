@@ -2,6 +2,7 @@ import 'package:bloc_sm/bloc/splash/splah_state.dart';
 import 'package:bloc_sm/bloc/splash/splash_bloc.dart';
 import 'package:bloc_sm/bloc/splash/splash_event.dart';
 import 'package:bloc_sm/main.dart';
+import 'package:bloc_sm/ui/login_screen.dart';
 import 'package:bloc_sm/ui/slider_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       listener: (context, state) {
         if (state is SplashComplete) {
           Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => SliderScreen(),));
+              MaterialPageRoute(builder: (context) => LoginScreen(),));
         }
       },
       child: Scaffold(

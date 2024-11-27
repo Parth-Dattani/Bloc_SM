@@ -1,7 +1,9 @@
 import 'package:bloc_sm/bloc/counter/counter_bloc.dart';
+import 'package:bloc_sm/bloc/login/login_bloc.dart';
 import 'package:bloc_sm/bloc/slider/slider_bloc.dart';
 import 'package:bloc_sm/bloc/splash/splash_bloc.dart';
 import 'package:bloc_sm/ui/counter_screen.dart';
+import 'package:bloc_sm/ui/login_screen.dart';
 import 'package:bloc_sm/ui/slider_screen.dart';
 import 'package:bloc_sm/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => CounterBloc()),
         BlocProvider(create: (_) => SliderBloc()),
         BlocProvider(create: (_) => SplashBloc()),
+        BlocProvider(create: (_) => LoginBloc()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
